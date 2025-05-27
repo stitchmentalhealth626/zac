@@ -28,8 +28,11 @@ on:
 
 jobs:
   MSDO:
-    # currently only windows latest is supported
     runs-on: windows-latest
+
+    permissions: # Add this section to restrict permissions
+      contents: read
+      actions: write
 
     steps:
     - uses: actions/checkout@v4
